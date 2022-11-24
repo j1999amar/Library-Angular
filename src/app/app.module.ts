@@ -19,7 +19,7 @@ const myRouter: Routes = [
     component: AdminLoginComponent,
   },
   {
-    path: 'userlogin',
+    path: 'userLogin',
     component: UserLoginComponent,
   },
   {
