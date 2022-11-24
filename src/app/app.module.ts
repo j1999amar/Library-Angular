@@ -11,7 +11,42 @@ import { BookEntryComponent } from './book-entry/book-entry.component';
 import { BookSearchComponent } from './book-search/book-search.component';
 import { BookDeleteComponent } from './book-delete/book-delete.component';
 import { BookIssueComponent } from './book-issue/book-issue.component';
-
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule, Routes, ROUTES } from '@angular/router';
+const myRouter: Routes = [
+  {
+    path: '',
+    component: AdminLoginComponent,
+  },
+  {
+    path: 'userLogin',
+    component: UserLoginComponent,
+  },
+  {
+    path: 'userRegistration',
+    component: UserReistrationComponent,
+  },
+  {
+    path: 'bookList',
+    component: BookListComponent,
+  },
+  {
+    path: 'bookEntry',
+    component:BookEntryComponent
+  },
+  {
+    path:'bookSearch',
+    component:BookSearchComponent
+  },
+  {
+    path:'bookDelete',
+    component:BookDeleteComponent
+  },
+  {
+    path:'bookIssue',
+    component:BookIssueComponent
+  }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +57,11 @@ import { BookIssueComponent } from './book-issue/book-issue.component';
     BookEntryComponent,
     BookSearchComponent,
     BookDeleteComponent,
-    BookIssueComponent
+    BookIssueComponent,
+    NavbarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(myRouter)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
