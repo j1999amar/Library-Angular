@@ -5,47 +5,47 @@
             <div class="row g-3">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Name </label>
-                    <input type="text" name="" id="" class="form-control">
+                    <input type="text" name="" id="" class="form-control" name="name"[(ngModel)]=name>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Addhaar No </label>
-                    <input tye="text" name="" id="" class="form-control">
+                    <input tye="text" name="" id="" class="form-control" name="addhaar"[(ngModel)]=addhaar>
 
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Address</label>
-                    <textarea class="form-control" name="" id="" cols="5" rows="1"></textarea>
+                    <textarea class="form-control" name="" id="" cols="5" rows="1" name="address"[(ngModel)]=address></textarea>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Pincode</label>
-                    <input type="text" name="" id="" class="form-control">
+                    <input type="text" name="" id="" class="form-control" name="pincode"[(ngModel)]=pincode>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Date od Birth</label>
-                    <input type="date" name="" id="" class="form-control">
+                    <input type="date" name="" id="" class="form-control" name="dob"[(ngModel)]=dob>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Email</label>
-                    <input type="email" name="" id="" class="form-control">
+                    <input type="email" name="" id="" class="form-control" name="email"[(ngModel)]=email >
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Phone</label>
-                    <input type="text" name="" id="" class="form-control">
+                    <input type="text" name="" id="" class="form-control" name="phone"[(ngModel)]=phone>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Username</label>
-                    <input type="text" name="" id="" class="form-control">
+                    <input type="text" name="" id="" class="form-control" name="username"[(ngModel)]=username>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Password</label>
-                    <input type="password" name="" id="" class="form-control">
+                    <input type="password" name="" id="" class="form-control" name="password"[(ngModel)]=password>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Confirm Password</label>
-                    <input type="password" name="" id="" class="form-control">
+                    <input type="password" name="" id="" class="form-control" name="confrimPassword"[(ngModel)]=confrimPassword>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button routerLink="/userLogin" class="btn btn-primary">Register</button>
+                    <button routerLink="/userLogin" class="btn btn-primary" (click)="readValue()">Register</button>
                 </div><br>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 g-3">
                     <button routerLink="/userLogin" class="btn btn-primary">Back User Login</button>
