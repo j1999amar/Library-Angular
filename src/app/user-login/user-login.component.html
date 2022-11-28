@@ -5,15 +5,15 @@
             <div class="row g-3">
                 <div class="col-12 col-sm 12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Username</label>
-                    <input type="text" name="" id="" class="form-control">
+                    <input type="text" name="" id="" class="form-control" name="username" [(ngModel)]="username" >
                 </div>
                 <div class="col-12 col-sm 12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Password</label>
-                    <input type="password" name="" id="" class="form-control">
+                    <input type="password" name="" id="" class="form-control" name="password" [(ngModel)]="password">
                 </div>
                 <div class="col-12 col-sm 12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                    
-                    <button routerLink="/bookList" class="btn btn-primary">Login</button>
+                    <button routerLink="/bookList" class="btn btn-primary" (click)="readValue()">Login</button>
 
                 </div>
                 <div class="col-12 col-sm 12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-12 col-sm 12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <button routerLink="/userRegistration" class="btn btn-primary">Back User Registration</button>
-                </div>
+                </div> 
             </div>
            
         </div>
