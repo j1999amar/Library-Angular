@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-reistration',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-reistration.component.css']
 })
 export class UserReistrationComponent {
+  constructor(private route:Router){}
   name=""
   addhaar=""
   address=""
@@ -30,7 +32,23 @@ export class UserReistrationComponent {
       "Password":this.password,
       "Confirm Password":this.confrimPassword
     }]
-    console.log(data)
+    if(this.name!=""&&this.addhaar!=""&&this.address!=""&&this.pincode!=""&&this.dob!=""&&this.email!=""&&this.phone!=""&&this.username!=""&&this.password!=""&&this.confrimPassword!=""){
+      this.route.navigate(['/userLogin'])
+    }else{
+      alert("enter all the fields")
+        this.name=""
+        this.addhaar=""
+        this.address=""
+        this.pincode=""
+        this.dob=""
+        this.email=""
+        this.phone=""
+        this.username=""
+        this.password=""
+        this.confrimPassword=""
+        this.route.navigate(['/userRegistration'])
+      }
+    }
   }
 
-}
+
